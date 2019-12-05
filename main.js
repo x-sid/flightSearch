@@ -64,7 +64,7 @@ form.addEventListener("submit", e => {
   };
 
   axios
-    .post("http://www.ije-api.tcore.xyz/v1/flight/search-flight", {
+    .post("https://www.ije-api.tcore.xyz/v1/flight/search-flight", {
       header: {
         "Content-Type": "application/json",
         cookie: "ayaeh33y1nw4yjtm3fdr0gzq"
