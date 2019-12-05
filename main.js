@@ -73,7 +73,7 @@ form.addEventListener("submit", e => {
     })
     .then(response => {
       document.querySelectorAll("img").src = "";
-
+      console.log(response);
       const arrivalDate =
         response.data.body.data.itineraries[0].origin_destinations[0]
           .segments[0].arrival.date;
