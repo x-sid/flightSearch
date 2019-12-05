@@ -1,0 +1,158 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <title>Document</title>
+    <style>
+      body {
+        background: black;
+      }
+      label {
+        color: grey;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 mr-10">
+          <header>
+            <h1 class="display-4 mt-5">
+              Flight
+              <span class="text-primary ">Search</span>
+            </h1>
+          </header>
+          <div class="mt-2">
+            <form action="" id="flight-search">
+              <div class="form-group">
+                <label for="" id="from">From <span id="fError"></span></label>
+                <input
+                  type="text "
+                  class="form-control"
+                  name=""
+                  id="departure"
+                  placeholder="Enter current location code e.g DXB for dubai"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="" id="to">To</label>
+                <input
+                  type="text "
+                  class="form-control"
+                  name=""
+                  id="arrival"
+                  placeholder="Enter destination location code e.g LOS for lagos"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="" id="departure-date">Departure Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  name=""
+                  id="d-date"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="" id="return-date">Return Date</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  name=""
+                  id="r-date"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="" id="cabin">Cabin Class</label>
+                <input
+                  type="text "
+                  class="form-control"
+                  name=""
+                  id="c-class"
+                  placeholder="e.g All,First,Economy,Business,Premium"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="" id="preferredAir">Prefered Airline Code</label>
+                <input
+                  type="text "
+                  class="form-control"
+                  name=""
+                  id="p-air"
+                  placeholder="EK for emirates"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="" id="numA">No of Adult</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name=""
+                  id="a-num"
+                  maxlength="1"
+                  placeholder=" Any number between 0-9"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="" id="numC">No of Child</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name=""
+                  maxlength="1"
+                  id="c-num"
+                  placeholder=" Any number between 0-9"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="" id="numI">No of Infant</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  name=""
+                  maxlength="1"
+                  id="i-num"
+                  placeholder=" Any number between 0-9"
+                  required
+                />
+              </div>
+              <input
+                type="submit"
+                class="btn btn-primary btn-block"
+                value="Search Flight"
+                style="color:black;font-size:18px;"
+              />
+            </form>
+          </div>
+        </div>
+        <div class="col-md-5 offset-md-2">
+          <header>
+            <h1 class="display-4 mt-5">
+              <span class="text-primary ">Results</span>
+            </h1>
+          </header>
+
+          <div class="mt-3" id="rd-date"></div>
+          <div class="mt-3" id="rd-time"></div>
+          <div class="mt-3" id="ra-date"></div>
+          <div class="mt-3 load" id="ra-time"></div>
+          <div class="mt-3" id="d-air"></div>
+          <div class="mt-3" id="tAmt"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>
